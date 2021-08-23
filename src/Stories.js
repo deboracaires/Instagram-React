@@ -11,19 +11,10 @@ export default function Stories(){
     {imagem: "assets/img/respondeai.svg", usuario: "respondeai"},
     {imagem: "assets/img/filomoderna.svg", usuario: "filomoderna"},
     {imagem: "assets/img/memeriagourmet.svg", usuario: "memeriagourmet"},
-
   ];
-
-  
-
-  return(
-          
-        <div class="stories">
-            
-            {stories.map(story => <Story img = {story.imagem} text = {story.usuario} />)}
-          
-          
-               
+  return( 
+        <div class="stories"> 
+          {stories.map(story => <Story img = {story.imagem} text = {story.usuario} />)}     
           <div class="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
           </div>
