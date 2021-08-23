@@ -1,4 +1,6 @@
 export default function Navbar () {
+    const nomesIcones = ["paper-plane-outline", "compass-outline", "heart-outline", "person-outline"];
+
     return (
         <div class="navbar">
             <div class="container">
@@ -8,30 +10,31 @@ export default function Navbar () {
                     <img src="assets/img/logo.png" />
                 </div>
 
-            <div class="logo-mobile">
-            <ion-icon name="logo-instagram"></ion-icon>
-            </div>
+                <div class="logo-mobile">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </div>
 
-            <div class="instagram-mobile">
-            <img src="assets/img/logo.png" />
-            </div>
+                <div class="instagram-mobile">
+                    <img src="assets/img/logo.png" />
+                </div>
   
-            <div class="pesquisa">
-            <input type="text" placeholder="Pesquisar" />
-            </div>
+                <div class="pesquisa">
+                <input type="text" placeholder="Pesquisar" />
+                </div>
   
-            <div class="icones">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-            <ion-icon name="compass-outline"></ion-icon>
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="person-outline"></ion-icon>
-            </div>
+                <div class="icones">
+                    {
+                        nomesIcones.map(nome => <ion-icon name={nome}></ion-icon>)
+                    }
+                </div>
 
-            <div class="icones-mobile">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
+                <div class="icones-mobile">
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
             </div>
         </div>
 
     );
 }
+
+
